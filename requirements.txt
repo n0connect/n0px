@@ -72,7 +72,7 @@ pyyaml>=6.0
 # ============================================================================
 # Create virtual environment:
 #   python3 -m venv ml/venv
-#
+
 # Activate virtual environment:
 #   source ml/venv/bin/activate  (macOS/Linux)
 #   ml\venv\Scripts\activate     (Windows)
@@ -80,6 +80,6 @@ pyyaml>=6.0
 # Install requirements:
 #   pip install --upgrade pip
 #   pip install -r requirements.txt
-#
+
 # Generate gRPC Python files (if needed):
 #   python -m grpc_tools.protoc -I./bridge/pb --python_out=./bridge/pb --grpc_python_out=./bridge/pb ./bridge/pb/prime_bridge.proto
