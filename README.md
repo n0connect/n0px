@@ -1,10 +1,27 @@
-# n0px: Prime Number Distribution and Analysis in Extended Space
+# n0px
 
-Three-layer distributed system for real-time cryptographic prime/composite classification with live streaming inference. Integrates C++ cryptographic core, Go microservice bridge, and Python ML pipeline.
+**Prime Number Distribution and Analysis in Extended Space**
+
+![Version](https://img.shields.io/badge/version-1.0.0-blue)
+![Platform](https://img.shields.io/badge/platform-macOS%20%7C%20Linux-lightgrey)
+![C++](https://img.shields.io/badge/C%2B%2B-17-blue)
+![Go](https://img.shields.io/badge/Go-1.21-cyan)
+![Python](https://img.shields.io/badge/Python-3.10%2B-green)
+![PyTorch](https://img.shields.io/badge/PyTorch-2.0-red)
+![gRPC](https://img.shields.io/badge/gRPC-1.56-yellow)
+![License](https://img.shields.io/badge/license-MIT-orange)
+
+<div align="center">
 
 ![n0px Architecture Visualization](docs/latent_analysis_report.png)
 
+*Distributed cryptographic prime/composite classification with live streaming inference*
+
+</div>
+
 ---
+
+Three-layer distributed system for real-time cryptographic prime/composite classification with live streaming inference. Integrates C++ cryptographic core, Go microservice bridge, and Python ML pipeline.
 
 ## Quick Start
 
