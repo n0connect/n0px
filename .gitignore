@@ -12,11 +12,10 @@
 *.a
 *.lib
 
-# C++ build outputs
-prime_core
-bridge/prime_bridge
-bridge/prime_vault
-prime_*
+# C++ build outputs (binaries only, not source files)
+/prime_core
+/bridge/prime_bridge
+/bridge/prime_vault
 
 # Go binaries
 *.out
