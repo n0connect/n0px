@@ -1,0 +1,130 @@
+{
+  "_IMPORTANT_BITS_SEMANTICS": "prime_bits controls RSA composite generation. raw_size_bytes MUST = ceil(prime_bits/8). Change both together: 256→32bytes, 2048→256bytes, 4096→512bytes",
+
+  "system": {
+    "prime_bits": 256,
+    "raw_size_bytes": 32
+  },
+
+  "network": {
+    "zmq_host": "127.0.0.1",
+    "zmq_port_core_push": 5558,
+    "zmq_port_core_pub": 5557,
+    "grpc_host": "localhost",
+    "grpc_port": 50051
+  },
+
+  "crypto": {
+    "noise_sigma": 0.05,
+    "miller_rabin_rounds": 25,
+    "chacha20_key_size": 32,
+    "blake2s_output_bits": 256
+  },
+
+  "buffer": {
+    "cpp_internal_queue_max": 2000,
+    "go_channel_buffer_size": 350000,
+    "python_queue_buffer_size": 4000,
+    "python_prefetch_batches": 8
+  },
+
+  "data": {
+    "_notes": "Data pipeline configuration. C++ core handles randomization.",
+    "batch_size": 64,
+    "balance_labels": true,
+    "balanced_buffer_size": 4096,
+    "balanced_fetch_timeout_ms": 2000
+  },
+
+  "sep_loss": {
+    "_notes": "Fisher/LDA separability loss: optimize for latent space class discrimination. Disabled by default; enable for supervised learning.",
+    "enabled": true,
+    "lambda": 0.025,
+    "eps": 1e-6,
+    "min_per_class": 2,
+    "warmup_steps": 500,
+    "ramp_steps": 3000
+  },
+
+  "probe": {
+    "_notes": "Linear probe metrics: train/test split, windowed buffer for stable accuracy measurement",
+    "enabled": true,
+    "every_steps": 500,
+    "buffer_size": 4096,
+    "train_frac": 0.8,
+    "seed": 1337
+  },
+
+  "labels": {
+    "easy_composite": 0,
+    "prime": 1,
+    "hard_composite": 2,
+    "dp_prime": 3,
+    "dp_composite": 4,
+    "dp_hard_composite": 5
+  },
+
+  "model": {
+    "_notes": "Long-run stable training for probabilistic VAE: lower LR, stronger regularization, more layers, safe dropout. input_dimension kept only as an assert; runtime still uses packet vector length.",
+    "input_dimension": 256,
+    "hidden_dimension": 768,
+    "num_layers": 6,
+    "dropout": 0.12,
+    "learning_rate": 0.00015,
+    "weight_decay": 0.00002,
+    "batch_size": 64,
+    "epochs": 60,
+    "checkpoint_save_interval": 2
+  },
+
+  "ae": {
+    "_notes": "Probabilistic cloud-fitting. KL warmup keeps early training from collapsing. grad_clip prevents rare stream spikes from nuking training.",
+    "beta_max": 0.35,
+    "beta_warmup_steps": 15000,
+    "activation": "silu",
+    "layernorm": true,
+    "grad_clip_max_norm": 1.0,
+
+    "_loss": "bit_mixture_gaussian",
+    "likelihood_sigma_source": "crypto.noise_sigma"
+  },
+
+  "dp_detection": {
+    "_notes": "DP fingerprint detection thresholds. Tuned for common DP mechanisms: Laplace, Gaussian, randomized response",
+    "mid_threshold": 0.80,
+    "entropy_threshold": 0.20,
+    "mean_range_min": 0.35,
+    "mean_range_max": 0.65,
+    "low_mid_threshold": 0.50,
+    "low_entropy_threshold": 0.10,
+    "epsilon_typical": 1.0,
+    "mechanism": "gaussian"
+  },
+
+  "vae": {
+    "_notes": "RealNoiseMixtureVAE configuration for KL schedule and free-bits",
+    "beta_max": 1.0,
+    "beta_warmup_steps": 20000,
+    "free_bits": 0.05,
+    "activation": "silu",
+    "layernorm": true
+  },
+
+  "bootstrap": {
+    "sample_count": 500,
+    "protocol_check_samples": 500,
+    "math_test_samples": 500,
+    "stress_test_duration_seconds": 240,
+    "min_throughput_packets_per_sec": 20000
+  },
+
+  "storage": {
+    "checkpoint_dir": "./checkpoints",
+    "db_path": "./prime_data"
+  },
+
+  "logging": {
+    "level": "INFO",
+    "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  }
+}

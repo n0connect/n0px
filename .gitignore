@@ -1,0 +1,215 @@
+# ============================================================================
+# PXQSDA .gitignore - Complete Release
+# ============================================================================
+
+# ============================================================================
+# BINARY EXECUTABLES
+# ============================================================================
+*.exe
+*.dll
+*.so
+*.dylib
+*.a
+*.lib
+
+# C++ build outputs
+prime_core
+bridge/prime_bridge
+bridge/prime_vault
+prime_*
+
+# Go binaries
+*.out
+
+# Test executables
+tests/cpp_core/test_csprng
+tests/go_bridge/*.test
+
+# ============================================================================
+# BUILD & COMPILATION ARTIFACTS
+# ============================================================================
+/build/
+/dist/
+/out/
+/bin/
+/obj/
+*.o
+*.obj
+*.su
+*.gch
+*.ipch
+
+# CMake
+CMakeLists.txt.user
+CMakeUserPresets.json
+
+# ============================================================================
+# PYTHON ENVIRONMENT & CACHE
+# ============================================================================
+# Virtual environments
+venv/
+ml/venv/
+.venv/
+env/
+ENV/
+
+# Python cache and compiled files
+__pycache__/
+*.py[cod]
+*.py~
+*$py.class
+.Python
+*.egg-info/
+dist/
+build/
+*.egg
+.eggs/
+
+# Python IDE
+.pytype/
+.dmypy.json
+dmypy.json
+
+# ============================================================================
+# JUPYTER & NOTEBOOKS
+# ============================================================================
+.ipynb_checkpoints
+*.ipynb_checkpoints
+*.ipynb
+
+# ============================================================================
+# ML/TRAINING ARTIFACTS
+# ============================================================================
+# Checkpoints and models
+checkpoints/
+checkpoints_rm0/
+checkpoints_rm1/
+checkpoints_cm0/
+checkpoints_cm1/
+*.pt
+*.pth
+*.pkl
+*.pickle
+*.safetensors
+
+# Training logs and outputs
+logs/
+runs/
+wandb/
+*.csv
+training_logs/
+metrics/
+tensorboard_logs/
+
+# Test outputs
+test_output/
+test_results/
+test_data/
+
+# ============================================================================
+# IDE & EDITOR SETTINGS
+# ============================================================================
+.vscode/
+.idea/
+*.iml
+*.iws
+*.ipr
+*.swp
+*.swo
+*~
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Vim
+.vim/
+*.vim
+.swp
+.swo
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+# ============================================================================
+# OS & SYSTEM FILES
+# ============================================================================
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# macOS
+.AppleDouble
+.LSOverride
+*.swp
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ============================================================================
+# TEMPORARY & LOG FILES
+# ============================================================================
+*.tmp
+*.log
+*.bak
+*.swp
+*.swo
+*~
+.temp/
+tmp/
+temp/
+
+# ============================================================================
+# DEPENDENCY LOCK FILES (Optional - uncomment if using)
+# ============================================================================
+# go.sum          # Uncomment if you want to ignore lockfiles
+# requirements-lock.txt
+
+# ============================================================================
+# DOCKER (if applicable)
+# ============================================================================
+.dockerignore
+.docker/
+
+# ============================================================================
+# MISC PROJECT FILES
+# ============================================================================
+reports/
+examples/
+.cache/
+*.cache
+.env
+.env.local
+.env.*.local
+
+# Protobuf compiled (optional - keep if you want to commit)
+# bridge/pb/*.pb.go
+# bridge/pb/*_pb2.py
+# bridge/pb/*_pb2_grpc.py
+*.swp
+*.swo
+# ============================================================================
+# VS CODE WORKSPACE
+# ============================================================================
+.vscode/settings.json
+.vscode/launch.json
+.vscode/tasks.json
+
+# ============================================================================
+# RELEASE & BACKUP FILES
+# ============================================================================
+*_backup_*.md
+*_old.md
+*BACKUP*.md
