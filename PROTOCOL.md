@@ -1,4 +1,4 @@
-# PXQSDA Protocol Specification
+# PX-QSDA Protocol Specification
 
 **Version:** 1.0  
 **Date:** December 2025  
@@ -20,7 +20,7 @@
 
 ## Protocol Overview
 
-PXQSDA uses a **three-layer communication protocol**:
+PX-QSDA uses a **three-layer communication protocol**:
 
 ```
 Layer 1: C++ → Go       [ZMQ PUSH/PULL]  Raw binary packets (1172 bytes)

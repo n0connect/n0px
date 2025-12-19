@@ -1,8 +1,8 @@
-# PRIME-X: Distributed Cryptographic Classification System
+# PX-QSDA: Distributed Cryptographic Classification System
 
 Three-layer distributed system for real-time cryptographic prime/composite classification with live streaming inference. Integrates C++ cryptographic core, Go microservice bridge, and Python ML pipeline.
 
-![PRIME-X Architecture Visualization](docs/latent_analysis_report.png)
+![PX-QSDA Architecture Visualization](docs/latent_analysis_report.png)
 
 ---
 

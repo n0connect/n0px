@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 """
-Checkpoint Analyzer (Prime-X)
+Checkpoint Analyzer (PX-QSDA)
 ============================
 
 Amaç:
