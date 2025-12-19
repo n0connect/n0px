@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-PX-QSDA AUDITOR v8.2
-===================
+n0px AUDITOR v8.2
+=================
 Full pipeline validator using config.json for all parameters.
 """
 
@@ -62,7 +62,7 @@ class C:
 def banner():
     print(f"{C.INF}{C.BOLD}")
     print("═══════════════════════════════════════════════════")
-    print("   PX-QSDA AUDITOR v8.2 — FULL PIPELINE VALIDATOR  ")
+    print("   n0px AUDITOR v8.2 — FULL PIPELINE VALIDATOR  ")
     print("═══════════════════════════════════════════════════")
     print(f"{C.RST}")
     print(f"{C.INF}Configuration: {BITS}-bit system @ {GRPC_HOST}:{GRPC_PORT}{C.RST}")
@@ -273,7 +273,7 @@ def continuous_audit(stub, interval_secs=10):
 def main():
     import argparse
     
-    parser = argparse.ArgumentParser(description="PX-QSDA Auditor")
+    parser = argparse.ArgumentParser(description="n0px Auditor")
     parser.add_argument(
         "--continuous",
         action="store_true",

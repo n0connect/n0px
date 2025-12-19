@@ -145,7 +145,7 @@ cd tests/go_bridge && go test -v bridge_integration_test.go
 
 ### Complete Test Suite
 ```bash
-cd /Users/n0n0/Desktop/n0n0/PXQSDA
+cd /Users/n0n0/Desktop/n0n0/n0px
 make all      # Compile everything
 make test     # Run all tests (unit + integration)
 ```
@@ -381,7 +381,7 @@ Optional enhancements:
 
 **Commands to Get Started:**
 ```bash
-cd /Users/n0n0/Desktop/n0n0/PXQSDA
+cd /Users/n0n0/Desktop/n0n0/n0px
 make all     # Build (1 min)
 make test    # Full test suite (15s)
 ```

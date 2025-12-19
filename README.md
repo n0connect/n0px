@@ -1,8 +1,8 @@
-# PX-QSDA: Distributed Cryptographic Classification System
+# n0px: Prime Number Distribution and Analysis in Extended Space
 
 Three-layer distributed system for real-time cryptographic prime/composite classification with live streaming inference. Integrates C++ cryptographic core, Go microservice bridge, and Python ML pipeline.
 
-![PX-QSDA Architecture Visualization](docs/latent_analysis_report.png)
+![n0px Architecture Visualization](docs/latent_analysis_report.png)
 
 ---
 

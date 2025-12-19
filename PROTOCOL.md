@@ -1,4 +1,4 @@
-# PX-QSDA Protocol Specification
+# n0px Protocol Specification
 
 **Version:** 1.0  
 **Date:** December 2025  

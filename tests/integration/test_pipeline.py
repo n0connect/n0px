@@ -26,8 +26,8 @@ from scipy import stats
 from typing import List, Tuple
 import logging
 
-sys.path.insert(0, '/Users/n0n0/Desktop/n0n0/PXQSDA')
-sys.path.insert(0, '/Users/n0n0/Desktop/n0n0/PXQSDA/bridge/pb')
+sys.path.insert(0, '/Users/n0n0/Desktop/n0n0/n0px')
+sys.path.insert(0, '/Users/n0n0/Desktop/n0n0/n0px/bridge/pb')
 
 # Try to import gRPC stubs
 try:

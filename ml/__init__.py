@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-PX-QSDA ML Pipeline
-===================
+n0px ML Pipeline
+================
 Real-time machine learning pipeline for prime/composite classification.
 Connects to Go Bridge microservice for cryptographic data streams.
 
@@ -16,7 +16,7 @@ Quick Start:
 """
 
 __version__ = "1.0.0"
-__author__ = "PX-QSDA Development Team"
+__author__ = "n0px Development Team"
 
 # Import public API
 from . import config

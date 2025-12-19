@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package primebridge;
+
+option go_package = "./pb";
+
+service DataProvider {
+  // Python bağlandığı an, Go ona sürekli veri akıtır (Server-side Streaming)
+  rpc StreamData (StreamConfig) returns (stream DataBatch) {}
+}
+
+message StreamConfig {
+  int32 batch_size = 1;    // Python kaçar kaçar istiyor?
+  bool mixed_mode = 2;     // True: Hem Asal Hem Composite karıştır
+  float mixing_ratio = 3;  // Karışım oranı (Örn: 0.5 -> %50 Asal, %50 Composite)
+}
+
+message DataBatch {
+  // Tek bir veri paketinin içeriği
+  bytes raw_bytes = 1;     // C++'tan gelen ham byte'lar (Raw Integer)
+  repeated float input_vector = 2; // Modelin girdisi (Noise eklenmiş bitler)
+  int32 label = 3;         // 0: EASY_COMP, 1: PRIME, 2: HARD_COMP, 3: DP_PRIME
+  bool is_synthetic = 4;   // ChaCha20 ile üretilmiş sentetik veri mi?
+}

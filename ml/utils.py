@@ -63,7 +63,7 @@ def setup_logger(name: str, level: str = "INFO") -> logging.Logger:
 # ============================================================
 #  BANNER & UI
 # ============================================================
-def print_banner(title: str = "PX-QSDA ML PIPELINE") -> None:
+def print_banner(title: str = "n0px ML PIPELINE") -> None:
     """Print a fancy banner to console."""
     print(f"{Colors.CYAN}{Colors.BOLD}")
     print("═" * 60)

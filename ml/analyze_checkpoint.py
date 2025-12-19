@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 """
-Checkpoint Analyzer (PX-QSDA)
+Checkpoint Analyzer (n0px)
 ============================
 
 Amaç:

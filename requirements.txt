@@ -1,5 +1,5 @@
 # ============================================================================
-# PXQSDA Project Requirements
+# n0px Project Requirements
 # Python 3.8+ dependencies for ML pipeline, gRPC client, and utilities
 # ============================================================================
 

@@ -32,7 +32,7 @@ Each layer is validated for:
 
 ### Option 1: Automatic Testing (Recommended)
 ```bash
-cd /Users/n0n0/Desktop/n0n0/PXQSDA
+cd /Users/n0n0/Desktop/n0n0/n0px
 make test          # Full test with automatic service management
 make test-quick    # Quick unit tests only (no services)
 make test-all      # Same as 'make test'
@@ -393,7 +393,7 @@ make ml-setup
 # Example GitHub Actions workflow
 - name: Run PRIME-X Tests
   run: |
-    cd /Users/n0n0/Desktop/n0n0/PXQSDA
+    cd /Users/n0n0/Desktop/n0n0/n0px
     make test-quick      # Quick check
     make test            # Full test with services
 ```

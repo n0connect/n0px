@@ -14,7 +14,7 @@ Professional test suite for PRIME-X 6-class randomness pipeline.
 
 ### 1. Build System
 ```bash
-cd /Users/n0n0/Desktop/n0n0/PXQSDA
+cd /Users/n0n0/Desktop/n0n0/n0px
 make proto-go proto-py all ml-setup
 ```
 
@@ -55,7 +55,7 @@ go test -v test_routing.go -run TestHashIntegrity
 
 #### Python Tests
 ```bash
-cd /Users/n0n0/Desktop/n0n0/PXQSDA
+cd /Users/n0n0/Desktop/n0n0/n0px
 python3 -m pytest tests/python_ml/test_ml_pipeline.py -v
 ```
 
@@ -76,7 +76,7 @@ python3 -m pytest tests/python_ml/test_ml_pipeline.py -v
 
 **Terminal 1 - C++ Core**
 ```bash
-cd /Users/n0n0/Desktop/n0n0/PXQSDA
+cd /Users/n0n0/Desktop/n0n0/n0px
 ./prime_core
 ```
 Expected output:
@@ -90,7 +90,7 @@ Expected output:
 
 **Terminal 2 - Go Bridge**
 ```bash
-cd /Users/n0n0/Desktop/n0n0/PXQSDA
+cd /Users/n0n0/Desktop/n0n0/n0px
 go run bridge/main.go
 ```
 Expected output:
@@ -328,7 +328,7 @@ cd tests/cpp_core && g++ -O2 test_csprng.cpp -o test_csprng && ./test_csprng
 ### Nightly Full Suite
 ```bash
 #!/bin/bash
-cd /Users/n0n0/Desktop/n0n0/PXQSDA
+cd /Users/n0n0/Desktop/n0n0/n0px
 
 echo "Building system..."
 make proto-go proto-py all ml-setup
@@ -343,7 +343,7 @@ cd ../go_bridge
 go test -v test_routing.go || exit 1
 
 echo "Running Python tests..."
-cd /Users/n0n0/Desktop/n0n0/PXQSDA
+cd /Users/n0n0/Desktop/n0n0/n0px
 python3 -m pytest tests/python_ml/test_ml_pipeline.py -v || exit 1
 
 echo "✓ ALL TESTS PASSED"

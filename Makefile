@@ -1,5 +1,5 @@
 # ==============================================================================
-# PX-QSDA PROJECT BUILD SYSTEM v6.0
+# n0px PROJECT BUILD SYSTEM v6.0
 # ✓ Production-Ready Release Build System
 # ✓ Comprehensive test suite (36+ tests)
 # ✓ Optimized for macOS M-series + CUDA/Linux

@@ -1,5 +1,5 @@
-# PXQSDA Project - Final Pre-Release Verification
-**Project:** Prime/Composite Classification with Differential Privacy  
+# n0px Project - Final Pre-Release Verification
+**Project:** Prime Number Distribution and Analysis in Extended Space  
 **Status:** 🟢 PRODUCTION READY FOR GITHUB RELEASE  
 **Last Verified:** 2025 Release Preparation  
 

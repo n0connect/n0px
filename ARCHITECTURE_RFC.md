@@ -1,4 +1,4 @@
-# PX-QSDA Architecture RFC
+# n0px Architecture RFC
 
 **Version:** 1.0 | **Status:** Experimental Only | **Date:** December 2025
 
@@ -19,7 +19,7 @@
 
 ## Introduction
 
-This RFC specifies PX-QSDA (Prime/Composite Classification with Differential Privacy), a three-layer distributed system for cryptographic number generation, verification, and machine learning classification.
+This RFC specifies n0px (Prime Number Distribution and Analysis in Extended Space), a three-layer distributed system for cryptographic number generation, verification, and machine learning classification.
 
 **Architecture Components:**
 
